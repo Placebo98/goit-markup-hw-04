@@ -164,9 +164,14 @@ a {
 
 /* ------------------Hero Section----------------- */
 .hero {
-	background: var(--hero-background-color);
 	text-align: center;
 	padding: 200px 0;
+	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg-main.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 .hero-title {
@@ -214,6 +219,16 @@ a {
 }
 .features-item {
 	width: calc((100% - 72px) / 4);
+}
+.features-box {
+	display: flex;
+	justify-content: center;
+	min-width: 264px;
+	background: #f4f4fd;
+	border-radius: 4px;
+	padding: 24px 0;
+}
+.features-icon {
 }
 .features-subtitle {
 	font-weight: 500;
@@ -297,7 +312,77 @@ a {
 	text-align: center;
 	letter-spacing: 0.02em;
 	color: var(--description-text-color);
+	margin-bottom: 8px;
 }
+
+.team-social-list {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+}
+.team-social-item {
+	width: 40px;
+	height: 40px;
+}
+.team-social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: var(--accent-color);
+	fill: white;
+}
+
+.team-social-link:is(:hover, :focus) .team-social-icon {
+	fill: black;
+}
+
+/* ------------------Companies Section----------------- */
+.companies {
+	padding: 120px 0;
+}
+
+.companies-title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11;
+	text-align: center;
+	letter-spacing: 0.02em;
+	text-transform: capitalize;
+	color: var(--main-title-color);
+	margin-bottom: 72px;
+}
+.companies-list {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+}
+
+.companies-item {
+	min-width: 168px;
+	min-height: 88px;
+}
+.companies-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #8e8f99;
+	border-radius: 4px;
+	color: #8e8f99;
+}
+
+.companies-link:is(:hover, :focus) {
+	color: var(--accent-color);
+	border: 1px solid var(--accent-color);
+}
+.companies-icon {
+	fill: currentColor;
+}
+
 /* ------------------Footer Section----------------- */
 .footer {
 	background: var(--footer-background-color);
@@ -328,6 +413,48 @@ a {
 	max-width: 264px;
 }
 
+.display-primary {
+	display: flex;
+	gap: 120px;
+}
+.footer-text-container {
+}
+
+.footer-social-container {
+}
+.footer-social-title {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+	margin-bottom: 16px;
+}
+.footer-social-list {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+}
+.footer-social-item {
+	width: 40px;
+	height: 40px;
+}
+.footer-social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.1);
+	fill: white;
+}
+.footer-social-link:is(:hover, :focus) .footer-social-icon {
+	fill: var(--accent-color);
+}
+
 /* ------------------Portfolio Section----------------- */
 
 .portfolio {
@@ -353,6 +480,13 @@ a {
 	width: calc((100% - 48px) / 3);
 }
 
+.porfolio-link {
+	display: block;
+}
+.porfolio-link:is(:hover, :focus) {
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .portfolio-btn {
 	font-family: inherit;
 	font-weight: 500;
@@ -366,16 +500,20 @@ a {
 	background: var(--portfolio-btn-background-color);
 	padding: 12px 24px;
 	border-radius: 4px;
-	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	border: 1px solid var(--portfolio-btn-background-color);
 }
 .portfolio-btn:hover {
 	background: var(--accent-color);
 	color: var(--portfolio-btn-text-hover-color);
+	border: var(--accent-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-btn:focus {
 	background: var(--accent-color);
 	color: var(--portfolio-btn-text-hover-color);
+	border: var(--accent-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-subtitle {
